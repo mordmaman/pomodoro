@@ -1,0 +1,53 @@
+html, body {
+    margin: 0, auto;
+    padding: 0;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: black;
+    color: yellow;
+}
+
+h1{
+    text-align: center;
+    font-size: 72px;
+}
+
+/*h2 {
+    text-align: center;
+}*/
+
+#setTimers{
+    text-align: center;
+}
+
+#setTimers h2 {
+    font-size: 42px;
+}
+
+#setTimers i {
+    font-size: 28px;
+}
+
+#setTimers p {
+    font-size: 32px;
+}
+
+#time {
+    text-align: center;
+    font-size: 68px;
+}
+
+#buttons {
+    text-align: center;
+    
+}
+
+#buttons #stop, #buttons #reset{
+    font-size: 28px;
+}
+
+#buttons #start{
+    font-size: 32px;
+}

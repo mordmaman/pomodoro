@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron:700' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pomodoro</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    
+
+    <link rel="stylesheet" href="pomodoro.css">
+    <script src="js/pomodoro.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/controller.js"></script>
+    
+</head>
+<body ng-app="myApp" ng-controller="myController">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-12">
+            <h1>Pomodoro Clock {{test}}</h1>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+               <i class="fa fa-plus" ng-click="addOneCycle()"></i>
+                <p class = "Cycles">{{cycle}}</p>
+                <i class="fa fa-minus" ng-click="takeOneCycle()"></i>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class ="row">
+            <div class ="col-md-6" id="setTimers">
+                <h2>Duration</h2>
+                <i class="fa fa-plus" ng-click="addOneDur()"></i>
+                <p class = "durationLength">{{duration | number:2}}</p>
+                <i class="fa fa-minus" ng-click="takeOneDur()"></i>
+
+
+            </div>
+            
+            <div class ="col-md-6" id="setTimers">
+                <h2>Break</h2>
+                <i class="fa fa-plus" ng-click="addOneBreak()"></i>
+                <p class = "breakLength">{{break | number: 2}}</p>
+                <i class="fa fa-minus" ng-click="takeOneBreak()"></i>
+
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        
+        <div class = "row">
+            <div class="col-md-12" id="time">
+                <p>{{duration | number: 2}}<p> 
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        
+        <div class = "row" id = "buttons">
+            <div class="col-md-4" id="reset">
+                <p ng-click="reset()" ng-disabled="isDisabled">Reset<p>
+            </div>
+            <div class="col-md-4" id="start" >
+                <p ng-click="start()">START<p>
+            </div>
+            <div class="col-md-4" id="stop">
+                <p ng-click="stop()">Stop<p>
+            </div>
+        </div>
+        
+        <div class = "row">
+            <div class="col-md-12" id="simple">
+                <p ng-click="startCountDown()" ng-disabled="isDisabled">{{numero | number: 2 }}<p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
